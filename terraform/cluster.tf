@@ -31,14 +31,3 @@ resource "google_container_cluster" "demo_cluster" {
     ]
   }
 }
-
-/*
-resource "google_project_services" "rgrpcvsrest" {
-  project = "rgrpcvsrest"
-  services = [
-    "container.googleapis.com",
-    "compute.googleapis.com"
-  ]
-}
-
-*/
