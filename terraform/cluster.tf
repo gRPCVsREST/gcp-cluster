@@ -15,7 +15,7 @@ provider "google" {
 resource "google_container_cluster" "demo_cluster" {
   name = "k8s-cluster"
   zone = "us-west1-a"
-  initial_node_count = 2
+  initial_node_count = 3
 
   master_auth {
     username = "${var.cluster_auth_user}"
@@ -28,6 +28,7 @@ resource "google_container_cluster" "demo_cluster" {
       "https://www.googleapis.com/auth/devstorage.read_only",
       "https://www.googleapis.com/auth/logging.write",
       "https://www.googleapis.com/auth/monitoring",
+      "https://www.googleapis.com/auth/trace.append"
     ]
   }
 }
